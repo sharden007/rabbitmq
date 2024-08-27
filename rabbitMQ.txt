@@ -1,7 +1,7 @@
-Run the RabbitMQ image from docker:
+Run the RabbitMQ image using docker(already installed locally):
 $ docker run --name rabbitmq bitnami/rabbitmq:latest
 •	Using Docker, ensure that the port is correctly mapped. For example:
-docker run -d -p 15672:15672 -p 5672:5672 rabbitmq:management
+$ docker run -d -p 15672:15672 -p 5672:5672 rabbitmq:management
 
 Login to management console:
 http://localhost:15672
