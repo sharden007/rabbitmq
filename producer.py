@@ -9,11 +9,10 @@ channel = connection.channel()
 channel.queue_declare(queue='hello')
 
 # Send 20 messages to the 'hello' queue with the format 'Hello RabbitMQ#n'
-for i in range(20):
+for i in range(1000000):
     message = f'Hello RabbitMQ#{i+1}'
     channel.basic_publish(exchange='', routing_key='hello', body=message)
     print(f" [x] Sent '{message}'")
-    time.sleep(5)  # Wait for 5 seconds before sending the next message
-
+    #time.sleep(0.2)
 # Close the connection
 connection.close()

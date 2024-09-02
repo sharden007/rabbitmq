@@ -10,7 +10,7 @@ def callback(ch, method, properties, body):
     global last_message_time
     print(f"Received {body}")
     last_message_time = time.time()  # Update the last message time
-
+    time.sleep(0.5)
 # Function to print "Waiting for messages..." every 7 seconds
 def print_waiting_message():
     while True:
